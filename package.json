@@ -1,0 +1,27 @@
+{
+  "name": "promise-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1-callback-example.js",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minhnt95/promise-js-examples.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minhnt95/promise-js-examples/issues"
+  },
+  "homepage": "https://github.com/minhnt95/promise-js-examples#readme"
+}
