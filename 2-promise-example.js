@@ -1,3 +1,7 @@
+/**
+* Mượn tạm của toidicodedao.com ^^
+*/
+
 'use strict';
 
 let vui = false;
