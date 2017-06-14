@@ -14,7 +14,7 @@ getJson('story.json')
     .then(function (story) {
         addHtmlToPage(story.heading);
 
-        // load sync
+        // start load sync
         return story.chapterUrls.reduce(function (chain, chapterUrl) {
             // Once the last chapter's promise is done…
             return chain
@@ -29,9 +29,24 @@ getJson('story.json')
                     console.log(step + '.', 'add it to the page: ' + chapterUrl);
                     step++;
                     addHtmlToPage(chapter.html);
+                }).catch(err => {
+                    console.log(err)
                 });
         }, Promise.resolve());
         // end load sync
+
+
+        // start load parallel
+
+        // let addChapterTextPromises = [];
+        // for (let chapter of story.chapterUrls) {
+        //     let handleChapterPromise = handleHtmlChapter(chapter);
+        //     addChapterTextPromises.push(handleChapterPromise);
+        // }
+        //
+        // return Promise.all(addChapterTextPromises);
+
+        // end load parallel
     })
     .then(function () {
         console.log('----------------');
@@ -60,16 +75,3 @@ function handleHtmlChapter(chapterUrl) {
         });
     })
 }
-
-
-// start parallel
-
-// let addChapterTextPromises = [];
-// for (let chapter of story.chapterUrls) {
-//     let handleChapterPromise = handleHtmlChapter(chapter);
-//     addChapterTextPromises.push(handleChapterPromise);
-// }
-//
-// return Promise.all(addChapterTextPromises);
-
-// end parallel

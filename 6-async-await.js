@@ -18,29 +18,3 @@ async function main() {
 
 main();
 console.log('Begin');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// babel --plugins transform-async-to-generator 5-async-await.js --out-file 6.async-await-build.js
